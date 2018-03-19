@@ -119,4 +119,3 @@ The Spring PetClinic sample application is released under version 2.0 of the [Ap
 [spring-petclinic-kotlin]: https://github.com/spring-petclinic/spring-petclinic-kotlin
 [spring-petclinic-rest]: https://github.com/spring-petclinic/spring-petclinic-rest
 
-This story is estimated at 5 Story Points (as shown in the "Estimate" field at the top right of the Detail View).
