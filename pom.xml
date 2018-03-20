@@ -102,6 +102,13 @@
       <version>${webjars-bootstrap.version}</version>
     </dependency>
     <!-- end of webjars -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+
     <!-- start jfrog -->
     <distributionManagement>
     <snapshotRepository>
@@ -111,14 +118,7 @@
     </snapshotRepository>
     </distributionManagement>
      <!-- end of frog -->
-      
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-devtools</artifactId>
-      <scope>runtime</scope>
-    </dependency>
-  </dependencies>
-
+    
   <build>
     <plugins>
       <plugin>
