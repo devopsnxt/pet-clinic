@@ -59,7 +59,13 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
-
+     
+	 <!-- Sonarqube -->
+	<dependency>
+      <groupId>org.sonarsource.scanner.maven</groupId>
+      <artifactId>sonar-maven-plugin</artifactId>
+      <version>3.2</version>
+    </dependency>
     <!-- Databases - Uses HSQL by default -->
     <dependency>
       <groupId>org.hsqldb</groupId>
@@ -251,6 +257,24 @@
       </plugin>
     </plugins>
   </reporting>
+  
+  <!-- Profile sonarqube-->
+  <profiles>
+    <profile>
+      <id>sonar</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <sonar.host.url>http://159.65.154.158:9000/sonar</sonar.host.url>
+	<sonar.login>df451d436763e46cffdb35c0a6ee16c016ee025e</sonar.login>
+        <sonar.projectName>PetClinic</sonar.projectName>
+        <sonar.projectVersion>2.0</sonar.projectVersion>
+        <sonar.test.exclusions>**/test/**/*.*</sonar.test.exclusions>
+        <sonar.exclusions>**/ai/**/*.*,**/jdbc/**/*.*,**/mpt/**/*.*,**/jcr/**/*.*,**/JDBC*</sonar.exclusions>
+      </properties>
+    </profile>
+  </profiles>
 
   <!-- Apache 2 license -->
   <licenses>
