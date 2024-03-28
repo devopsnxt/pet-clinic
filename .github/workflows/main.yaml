@@ -1,0 +1,16 @@
+
+name: 'Build and push to S3'
+
+on:
+  push:
+    branches:
+      - master
+  
+jobs:
+  deployToDevelop:
+    if: github.event.pull_request.merged == true
+    name: build and push to s3
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        run: echo "deployed"
